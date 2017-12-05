@@ -4,7 +4,12 @@
   <strong>Name:</strong>
   <%= @user.name %>
 </p>
-
+<%= @user.microposts.each do |umi| %>
+  <p>
+    <strong>Micropost:</strong>
+    <%= umi.content %>
+  </p>
+<% end %>
 <p>
   <strong>Email:</strong>
   <%= @user.email %>
